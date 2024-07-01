@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - OSTAD-Assignment-02</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link href="~/Content/layout.css" rel="stylesheet" />
+    <link href="~/Content/dashboard.css" rel="stylesheet" />
+    <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="wrapper">
+        <div class="main">
+            
+            <nav class="navbar navbar-expand px-4 py-3">
+                <div class="navbar-collapse collapse justify-content-end">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" onclick="logout()">
+                                <i class="lni lni-exit"></i>
+                                <span>Logout</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            
+            <main class="content px-3 py-4">
+                <div class="container-fluid">
+                    @RenderBody()
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script>
+        function logout() {
+            $.ajax({
+                url: '/Auth/Logout',
+                type: 'GET',
+                success: function (response) {
+                    window.location.href = '/Auth/Login';
+                },
+                error: function () {
+                    console.log('Logout failed.');
+                }
+            });
+        }
+    </script>
+    @Scripts.Render("~/bundles/jquery")
+    <script src="~/Scripts/bootstrap.bundle.min.js"></script>
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

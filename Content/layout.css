@@ -1,0 +1,68 @@
+﻿/* General body styling */
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+/* Wrapper for the entire layout */
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Main content area */
+.main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navbar styling */
+.navbar {
+    background-color: #ffffff;
+    padding: 1rem;
+}
+
+    .navbar .nav-link {
+        color: #fff;
+        background-color: #000;
+        display: flex;
+        align-items: center;
+    }
+
+        .navbar .nav-link i {
+            margin-right: 0.5rem;
+        }
+
+/* Main content styling */
+.content {
+    padding: 2rem;
+}
+
+
+
+/* Button styling */
+.button {
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    outline: 0;
+    background: #0e2238 !important;
+    width: 100%;
+    border: 0;
+    padding: 20px;
+    color: #ffffff;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+    .button:hover, .button:active, .button:focus {
+        background: #43A047 !important;
+    }
+
+
+

@@ -1,0 +1,103 @@
+﻿@using OST_Assignment_02.Models;
+@{
+    ViewBag.Title = "Dashboard";
+    List<Equipment> equipmentList = Equipment.ListEquipment();
+}
+
+<main>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center mb-2">
+                <h2 class="mt-5">Equipment List</h2>
+            </div>
+            <div class="col-12 overflow-auto">
+                <table class="table table-dark table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">Product ID</th>
+                            <th scope="col">Product Name</th>
+                            <th scope="col">Product Quantity</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var equipment in equipmentList)
+                        {
+                            <tr>
+                                <td>@equipment.EquipmentId</td>
+                                <td>@equipment.Name</td>
+                                <td>@equipment.Quantity</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-12 text-center mb-2">
+                <h2>Employee List</h2>
+            </div>
+            <div class="col-12 overflow-auto">
+                <table class="table table-dark table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">Employee ID</th>
+                            <th scope="col">Employee Name</th>
+                            <th scope="col">Employee Designation</th>
+                            <th scope="col">Employee Contact</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var equipment in equipmentList)
+                        {
+                            <tr>
+                                <td>@equipment.Member.MemberId</td>
+                                <td>@equipment.Member.MemberName</td>
+                                <td>@equipment.Member.MemberPosition</td>
+                                <td>@equipment.Member.MemberContact</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+   
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-12 text-center mb-2">
+                <h2>List of Employee With Equipment Assigned</h2>
+            </div>
+            <div class="col-12 overflow-auto">
+                <table class="table table-dark table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">Product ID</th>
+                            <th scope="col">Product Name</th>
+                            <th scope="col">Product Quantity</th>
+                            <th scope="col">Employee Name</th>
+                            <th scope="col">Employee Contact</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var equipment in equipmentList)
+                        {
+                            <tr>
+                                <td>@equipment.EquipmentId</td>
+                                <td>@equipment.Name</td>
+                                <td>@equipment.Quantity</td>
+                                <td>@equipment.Member.MemberName</td>
+                                <td>@equipment.Member.MemberContact</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</main>

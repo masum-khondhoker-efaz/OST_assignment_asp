@@ -1,0 +1,39 @@
+﻿@{
+    Layout = null;
+    ViewBag.Title = "Login";
+}
+
+@model OST_Assignment_02.Models.Account
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Login</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link href="~/Content/login.css" rel="stylesheet" />
+    <script>
+        var msg = "@ViewBag.Message";
+        if (msg !== "") {
+            alert(msg);
+        }
+        function validateInput() {
+            return false;
+        }
+    </script>
+</head>
+<body>
+    <div class="login-page">
+        <div class="form">
+            @using (Html.BeginForm("Login", "Auth", FormMethod.Post, new { @class = "login-form" }))
+            {
+                @Html.TextBoxFor(m => m.username, new { @class = "txtbox", id = "txt_username", type = "text", placeholder = "Username" })
+                @Html.TextBoxFor(m => m.password, new { @class = "txtbox", id = "txt_password", type = "password", placeholder = "Password" })
+                <input class="button" type="submit" value="Login" />
+            }
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,74 @@
+﻿@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+body {
+    background: #FFFFFF;
+    font-family: "Roboto", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #000000;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Login Page */
+.login-page {
+    width: 100%;
+    padding: 2% 0;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.form {
+    position: relative;
+    z-index: 1;
+    background: #0e2238;
+    max-width: 400px;
+    width: 100%;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    border-radius: 8px;
+}
+
+.txtbox {
+    font-family: "Roboto", sans-serif;
+    outline: 0;
+    color: #FFFFFF;
+    background: #4689b0;
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+    .txtbox::placeholder {
+        color: #FFFFFF; 
+    }
+
+.button {
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    outline: 0;
+    background: #000000;
+    width: 100%;
+    border: 0;
+    padding: 15px;
+    color: #FFFFFF;
+    font-size: 16px;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+    .button:hover, .button:active, .button:focus {
+        background: #4689b0 !important;
+    }

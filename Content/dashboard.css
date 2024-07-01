@@ -1,0 +1,34 @@
+﻿
+
+/* Custom Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+thead {
+    background: #0e2238;
+    color: #FFFFFF;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    width: 33.33%;
+    box-sizing: border-box;
+    text-align: center; /* Center text in th and td */
+    vertical-align: middle; /* Center content vertically */
+}
+
+th {
+    font-weight: bold;
+}
+
+tbody tr:nth-child(even) {
+    background: #f2f2f2;
+}
+
+tbody tr:hover {
+    background: #e0e0e0;
+}
